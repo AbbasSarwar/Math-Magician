@@ -59,6 +59,7 @@
 
 
 - **[Setup]**
+- **[UI Design]**
 
 
 
