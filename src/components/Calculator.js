@@ -1,39 +1,59 @@
+import { useState } from 'react';
 import './Calculator.css';
+import calculate from '../logic/calculate';
 
-const Calculator = () => (
-  <section className="Calc-container">
-    <div className="row">
-      <input type="Number" className="input" value="0" />
-    </div>
-    <div className="row">
-      <input type="button" value="AC" />
-      <input type="button" value="+/-" />
-      <input type="button" value="%" />
-      <input type="button" value="/" />
-    </div>
-    <div className="row">
-      <input type="button" value="7" />
-      <input type="button" value="8" />
-      <input type="button" value="9" />
-      <input type="button" value="*" />
-    </div>
-    <div className="row">
-      <input type="button" value="4" />
-      <input type="button" value="5" />
-      <input type="button" value="6" />
-      <input type="button" value="-" />
-    </div>
-    <div className="row">
-      <input type="button" value="1" />
-      <input type="button" value="2" />
-      <input type="button" value="3" />
-      <input type="button" value="+" />
-    </div>
-    <div className="row last-row">
-      <input type="button" value="0" />
-      <input type="button" value="." />
-      <input type="button" value="=" />
-    </div>
-  </section>
-);
+const Calculator = () => {
+  const [val, setval] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+  const calcs = (e) => {
+    const Newvalue = e.target.value;
+    const evaluate = calculate(val, Newvalue);
+    setval(evaluate);
+  };
+  const { total, next, operation } = val;
+  return (
+    <>
+      <section className="Calc-container">
+        <div className="row">
+          <h2>{!total && !next && !operation ? 0 : [total, operation, next]}</h2>
+        </div>
+        <div className="row">
+          <input type="button" value="AC" onClick={calcs} />
+          <input type="button" value="+/-" onClick={calcs} />
+          <input type="button" value="%" onClick={calcs} />
+          <input type="button" value="÷" onClick={calcs} />
+        </div>
+        <div className="row">
+          <input type="button" value="7" onClick={calcs} />
+          <input type="button" value="8" onClick={calcs} />
+          <input type="button" value="9" onClick={calcs} />
+          <input type="button" value="x" onClick={calcs} />
+        </div>
+        <div className="row">
+          <input type="button" value="4" onClick={calcs} />
+          <input type="button" value="5" onClick={calcs} />
+          <input type="button" value="6" onClick={calcs} />
+          <input type="button" value="-" onClick={calcs} />
+        </div>
+        <div className="row">
+          <input type="button" value="1" onClick={calcs} />
+          <input type="button" value="2" onClick={calcs} />
+          <input type="button" value="3" onClick={calcs} />
+          <input type="button" value="+" onClick={calcs} />
+        </div>
+        <div className="row last-row">
+          <input type="button" value="0" onClick={calcs} />
+          <input type="button" value="." onClick={calcs} />
+          <input type="button" value="=" onClick={calcs} />
+        </div>
+      </section>
+    </>
+  );
+};
+Calculator.defaultProps = {
+  num: 0,
+};
 export default Calculator;
