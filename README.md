@@ -60,6 +60,8 @@
 
 - **[Setup]**
 - **[UI Design]**
+- **[Functionable]**
+- **[Maths operators]**
 
 
 
