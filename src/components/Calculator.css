@@ -9,7 +9,7 @@
   flex-direction: column;
   width: 50%;
   height: 65vh;
-  margin: 20vh 25vw;
+  margin: 0vh 25vw;
 }
 
 .row {
@@ -63,4 +63,24 @@
 
 .row input:last-child {
   background-color: orange;
+}
+
+.Quotes {
+  padding: 5% 20%;
+}
+.quot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.box1{
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.box2 {
+  font-size: 18px;
+  width: 80%;
 }
