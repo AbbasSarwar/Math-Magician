@@ -9,7 +9,7 @@
   flex-direction: column;
   width: 50%;
   height: 65vh;
-  margin: 0vh 25vw;
+  margin: 0 25vw;
 }
 
 .row {
@@ -68,6 +68,7 @@
 .Quotes {
   padding: 5% 20%;
 }
+
 .quot {
   display: flex;
   flex-direction: row;
@@ -75,11 +76,12 @@
   border: 1px solid black;
 }
 
-.box1{
+.box1 {
   width: 20%;
   display: flex;
   align-items: center;
 }
+
 .box2 {
   font-size: 18px;
   width: 80%;
