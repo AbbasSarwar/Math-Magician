@@ -4,12 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(100, 157, 138);
+}
+
+.Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px;
+  color: #f40e0e;
+}
+
+.Main h3 {
+  font-size: 25px;
+}
+
 .Calc-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 65vh;
-  margin: 0 25vw;
 }
 
 .row {
