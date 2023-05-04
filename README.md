@@ -62,7 +62,8 @@
 - **[Maths operators]**
 - **[Routing Pages]**
 
-
+## :rocket: Live Demo <a name="live-demo"></a>
+-[DEMO](https://abbassarwar.github.io/Math-Magician/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
