@@ -10,15 +10,15 @@ const App = () => (
     <nav>
       <h1>Math Magicians</h1>
       <ul>
-        <li><Link exact to="/">Home</Link></li>
-        <li><Link exact to="/Calculator">Calculator</Link></li>
-        <li><Link exact to="/Quotes">Quote</Link></li>
+        <li><Link exact to="/Math-Magician">Home</Link></li>
+        <li><Link exact to="/Math-Magician/Calculator">Calculator</Link></li>
+        <li><Link exact to="/Math-Magician/Quotes">Quote</Link></li>
       </ul>
     </nav>
     <Routes>
       <Route exact path="/Math-Magician" element={<Home />} />
-      <Route path="/Calculator" element={<Calculator />} />
-      <Route path="/Quotes" element={<Quotes />} />
+      <Route path="/Math-Magician/Calculator" element={<Calculator />} />
+      <Route path="/Math-Magician/Quotes" element={<Quotes />} />
     </Routes>
   </>
 );
