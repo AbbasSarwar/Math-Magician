@@ -16,9 +16,9 @@ const App = () => (
       </ul>
     </nav>
     <Routes>
-      <Route exact path="/Math-Magician/" element={<Home />} />
-      <Route path="Math-Magician/Calculator" element={<Calculator />} />
-      <Route path="Math-Magician/Quotes" element={<Quotes />} />
+      <Route exact path="/Math-Magician" element={<Home />} />
+      <Route path="/Calculator" element={<Calculator />} />
+      <Route path="/Quotes" element={<Quotes />} />
     </Routes>
   </>
 );
